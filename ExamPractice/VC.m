@@ -17,19 +17,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [_num1 setKeyboardType:UIKeyboardTypeNumberPad];
+    [_num2 setKeyboardType:UIKeyboardTypeNumberPad];
+    [_num1 becomeFirstResponder];
+    
 }
 
 -(IBAction)saveData{
+    [_num1 resignFirstResponder];
+    [_num2 resignFirstResponder];
+    
     float number1 =  [_num1.text floatValue];
     float number2 = [_num2.text floatValue];
 
     float an = number1+number2;
     _ans.text = [NSString stringWithFormat:@"%f",an];
-    
-    NSLog(@"Location: %@",_gps_location);
-}
-
--(void) mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
     
 }
 

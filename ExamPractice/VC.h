@@ -7,14 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
-#import <MapKit/MapKit.h>
 
-@interface VC : UIViewController<MKMapViewDelegate>
+@interface VC : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *num1;
 @property (weak, nonatomic) IBOutlet UITextField *num2;
 @property (weak, nonatomic) IBOutlet UILabel *ans;
-
-@property (strong,nonatomic) CLLocation *gps_location;
 
 @end
